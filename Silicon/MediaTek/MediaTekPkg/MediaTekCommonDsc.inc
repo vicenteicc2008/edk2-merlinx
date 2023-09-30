@@ -497,6 +497,9 @@
   # Simple framebuffer
   Silicon/MediaTek/MediaTekPkg/Drivers/SimpleFbDxe/SimpleFbDxe.inf
 
+  # Keypad
+  Silicon/MediaTek/MediaTekPkg/Drivers/KeypadDxe/KeypadDxe.inf
+
   # ACPI
   # We use pre-built ACPI tables, so only core components are loaded
   MdeModulePkg/Universal/Acpi/AcpiTableDxe/AcpiTableDxe.inf
