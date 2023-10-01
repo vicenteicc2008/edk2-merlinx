@@ -18,6 +18,7 @@
 [PcdsFixedAtBuild.common]
   gMediaTekTokenSpaceGuid.PcdMipiFrameBufferWidth|1088
   gMediaTekTokenSpaceGuid.PcdMipiFrameBufferHeight|2340
+  gMediaTekTokenSpaceGuid.PcdMipiFrameBufferAddress|0x7ED58000
 
   # Simple Init
   gSimpleInitTokenSpaceGuid.PcdGuiDefaultDPI|400
