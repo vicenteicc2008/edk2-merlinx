@@ -57,14 +57,16 @@ KeypadDeviceImplConstructor(VOID)
   }
 
   // Configure keys
-  
+  #error hi
   // volume down
+#ifdef VOLUME_DOWN_GPIO
+#error hi
   StaticContext              = KeypadKeyCodeToKeyContext(114);
   StaticContext->DeviceType  = KEY_DEVICE_TYPE_LEGACY;
-  StaticContext->Gpio        = 93;
+  StaticContext->Gpio        = VOLUME_DOWN_GPIO;
   StaticContext->ActiveLow   = TRUE;
   StaticContext->IsValid     = TRUE;
-
+#endif
   return RETURN_SUCCESS;
 }
 

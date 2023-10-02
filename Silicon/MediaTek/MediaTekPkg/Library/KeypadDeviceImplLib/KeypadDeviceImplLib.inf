@@ -13,7 +13,6 @@
 [Packages]
   MdePkg/MdePkg.dec
   ArmPkg/ArmPkg.dec
-  Silicon/MediaTek/MT6765Pkg/MT6765.dec
 
 [LibraryClasses]
   GpioLib
