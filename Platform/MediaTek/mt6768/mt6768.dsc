@@ -17,14 +17,14 @@
 ################################################################################
 
 [Defines]
-  SOC_PLATFORM            = mt6765
+  SOC_PLATFORM            = mt6768
   USE_PHYSICAL_TIMER      = TRUE
 
 !include Silicon/MediaTek/MediaTekPkg/MediaTekCommonDsc.inc
 
 [PcdsFixedAtBuild.common]
   gArmTokenSpaceGuid.PcdSystemMemoryBase|0x40000000
-  gArmTokenSpaceGuid.PcdSystemMemorySize|0xc0000000
+  gArmTokenSpaceGuid.PcdSystemMemorySize|0xE00000000
 
   gArmTokenSpaceGuid.PcdCpuVectorBaseAddress|0x40C40000     # CPU Vectors
   gArmTokenSpaceGuid.PcdArmArchTimerFreqInHz|13000000
@@ -33,7 +33,7 @@
   gArmTokenSpaceGuid.PcdArmArchTimerVirtIntrNum|11
   gArmTokenSpaceGuid.PcdArmArchTimerHypIntrNum|10
   gArmTokenSpaceGuid.PcdGicDistributorBase|0x0c000000
-  gArmTokenSpaceGuid.PcdGicRedistributorsBase|0x0c100000
+  gArmTokenSpaceGuid.PcdGicRedistributorsBase|0x0c400000
   gArmTokenSpaceGuid.PcdGicInterruptInterfaceBase|0x0c400000
 
   gEfiMdeModulePkgTokenSpaceGuid.PcdAcpiDefaultOemRevision|0x00000850
@@ -42,9 +42,9 @@
   #gEmbeddedTokenSpaceGuid.PcdPrePiCpuIoSize|44
 
   gMediaTekTokenSpaceGuid.PcdUefiMemPoolBase|0x40C50000         # DXE Heap base address
-  gMediaTekTokenSpaceGuid.PcdUefiMemPoolSize|0x0F3B0000         # UefiMemorySize, DXE heap size
+  gMediaTekTokenSpaceGuid.PcdUefiMemPoolSize|0x0C1B0000         # UefiMemorySize, DXE heap size
 
-  gArmPlatformTokenSpaceGuid.PcdCoreCount|4
+  gArmPlatformTokenSpaceGuid.PcdCoreCount|8
   gArmPlatformTokenSpaceGuid.PcdClusterCount|1
 
   #

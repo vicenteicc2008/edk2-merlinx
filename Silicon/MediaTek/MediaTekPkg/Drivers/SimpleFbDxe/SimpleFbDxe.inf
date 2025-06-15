@@ -38,6 +38,7 @@
   gMediaTekTokenSpaceGuid.PcdMipiFrameBufferAddress
   gMediaTekTokenSpaceGuid.PcdMipiFrameBufferWidth
   gMediaTekTokenSpaceGuid.PcdMipiFrameBufferHeight
+  gMediaTekTokenSpaceGuid.PcdMipiFrameBufferLayers
 
 [Guids]
   gEfiMdeModulePkgTokenSpaceGuid

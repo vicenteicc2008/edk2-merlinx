@@ -269,8 +269,7 @@
   UefiDevicePathLib|MdePkg/Library/UefiDevicePathLib/UefiDevicePathLib.inf
   UefiScsiLib|MdePkg/Library/UefiScsiLib/UefiScsiLib.inf
 
-  #SerialPortLib|Silicon/MediaTek/MediaTekPkg/Library/FrameBufferSerialPortLib/FrameBufferSerialPortLib.inf
-  SerialPortLib|Silicon/MediaTek/MediaTekPkg/Library/UartSerialPortLib/UartSerialPortLib.inf
+  SerialPortLib|Silicon/MediaTek/MediaTekPkg/Library/FrameBufferSerialPortLib/FrameBufferSerialPortLib.inf
 
 !if $(AB_SLOTS_SUPPORT) == TRUE
   BootSlotLib|GPLDrivers/Library/BootSlotLib/BootSlotLib.inf
