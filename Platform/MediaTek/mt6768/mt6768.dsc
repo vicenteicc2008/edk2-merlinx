@@ -44,6 +44,9 @@
   gMediaTekTokenSpaceGuid.PcdUefiMemPoolBase|0x40C50000         # DXE Heap base address
   gMediaTekTokenSpaceGuid.PcdUefiMemPoolSize|0x0C1B0000         # UefiMemorySize, DXE heap size
 
+  gMediaTekTokenSpaceGuid.PcdMipiFrameBufferLayers|2
+  gMediaTekTokenSpaceGuid.PcdWatchdogWorkingTimer|0
+
   gArmPlatformTokenSpaceGuid.PcdCoreCount|8
   gArmPlatformTokenSpaceGuid.PcdClusterCount|1
 
@@ -56,8 +59,15 @@
 [LibraryClasses.common]
   GpioLib|Silicon/MediaTek/MediaTekPkg/Library/GpioLib/GpioLib.inf
   KeypadDeviceImplLib|Silicon/MediaTek/MediaTekPkg/Library/KeypadDeviceImplLib/KeypadDeviceImplLib.inf
+  MtkGpioImplLib|Silicon/MediaTek/MT6768Pkg/Library/MtkGpioImplLib/MtkGpioImplLib.inf
+  PmicWrapperImplLib|Silicon/MediaTek/MT6768Pkg/Library/PmicWrapperImplLib/PmicWrapperImplLib.inf
   PlatformMemoryMapLib|Silicon/MediaTek/MT6768Pkg/Library/PlatformMemoryMapLib/PlatformMemoryMapLib.inf
   PlatformPeiLib|Silicon/MediaTek/MT6768Pkg/Library/PlatformPeiLib/PlatformPeiLib.inf
   PlatformPrePiLib|Silicon/MediaTek/MT6768Pkg/Library/PlatformPrePiLib/PlatformPrePiLib.inf
   MsPlatformDevicesLib|Silicon/MediaTek/MT6768Pkg/Library/MsPlatformDevicesLib/MsPlatformDevicesLib.inf
   SOCSmbiosInfoLib|Silicon/MediaTek/MT6768Pkg/Library/SOCSmbiosInfoLib/SOCSmbiosInfoLib.inf
+
+[Components.common]
+  Silicon/MediaTek/MediaTekPkg/Drivers/MtkGpioDxe/MtkGpioDxe.inf
+  Silicon/MediaTek/MediaTekPkg/Drivers/MT6358PmicDxe/MT6358PmicDxe.inf
+  EmbeddedPkg/RealTimeClockRuntimeDxe/RealTimeClockRuntimeDxe.inf

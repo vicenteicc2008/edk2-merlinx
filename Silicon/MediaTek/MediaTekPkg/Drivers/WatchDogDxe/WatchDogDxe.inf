@@ -1,0 +1,32 @@
+[Defines]
+  INF_VERSION                    = 1.25
+  BASE_NAME                      = WatchDogDxe
+  FILE_GUID                      = 3797FB9C-B894-4564-B2CA-4FBEF96FBFFF
+  MODULE_TYPE                    = DXE_DRIVER
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = WatchdogDxeEntry
+
+[Sources.common]
+  WatchDogDxe.c
+
+[Packages]
+  EmbeddedPkg/EmbeddedPkg.dec
+  MdePkg/MdePkg.dec
+  Silicon/MediaTek/MediaTekPkg/MediaTekPkg.dec
+
+[LibraryClasses]
+  BaseLib
+  DebugLib
+  IoLib
+  TimerLib
+  UefiLib
+  UefiBootServicesTableLib
+  UefiDriverEntryPoint
+  PcdLib
+
+[FixedPcd]
+  gMediaTekTokenSpaceGuid.PcdWatchdogBaseAddress
+  gMediaTekTokenSpaceGuid.PcdWatchdogWorkingTimer
+
+[Depex]
+  TRUE

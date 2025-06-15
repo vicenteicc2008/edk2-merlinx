@@ -1,0 +1,27 @@
+[Defines]
+  INF_VERSION                    = 1.25
+  BASE_NAME                      = MT6358PmicDxe
+  FILE_GUID                      = 7b8f6aec-362b-46c1-8551-4cd5bd533063
+  MODULE_TYPE                    = DXE_DRIVER
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = MT6358PmicInitialize
+
+[Sources.common]
+  MT6358PmicDxe.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+  Silicon/MediaTek/MediaTekPkg/MediaTekPkg.dec
+
+[LibraryClasses]
+  IoLib
+  DebugLib
+  TimerLib
+  UefiDriverEntryPoint
+
+[Protocols]
+  gMediaTekMT6358PmicProtocolGuid
+  gMediaTekPmicWrapperProtocolGuid
+
+[Depex]
+  gMediaTekPmicWrapperProtocolGuid

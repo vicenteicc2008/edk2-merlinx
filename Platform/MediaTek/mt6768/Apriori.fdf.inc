@@ -26,6 +26,10 @@ APRIORI DXE {
 
   INF MdeModulePkg/Universal/Variable/RuntimeDxe/VariableRuntimeDxe.inf
 
+  INF Silicon/MediaTek/MediaTekPkg/Drivers/MtkGpioDxe/MtkGpioDxe.inf
+  INF Silicon/MediaTek/MediaTekPkg/Drivers/PmicWrapperDxe/PmicWrapperDxe.inf
+  INF Silicon/MediaTek/MediaTekPkg/Drivers/MT6358PmicDxe/MT6358PmicDxe.inf
+
   INF EmbeddedPkg/EmbeddedMonotonicCounter/EmbeddedMonotonicCounter.inf
   INF MdeModulePkg/Universal/ResetSystemRuntimeDxe/ResetSystemRuntimeDxe.inf
   INF EmbeddedPkg/RealTimeClockRuntimeDxe/RealTimeClockRuntimeDxe.inf

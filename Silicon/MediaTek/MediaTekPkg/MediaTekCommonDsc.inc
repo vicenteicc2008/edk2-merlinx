@@ -478,6 +478,12 @@
   MdeModulePkg/Bus/Scsi/ScsiBusDxe/ScsiBusDxe.inf
   MdeModulePkg/Bus/Scsi/ScsiDiskDxe/ScsiDiskDxe.inf
 
+  # PMIC
+  Silicon/MediaTek/MediaTekPkg/Drivers/PmicWrapperDxe/PmicWrapperDxe.inf
+
+  # Watchdog Kicker
+  Silicon/MediaTek/MediaTekPkg/Drivers/WatchDogDxe/WatchDogDxe.inf
+
   # USB
   MdeModulePkg/Bus/Usb/UsbMouseAbsolutePointerDxe/UsbMouseAbsolutePointerDxe.inf
   MdeModulePkg/Bus/Usb/UsbBusDxe/UsbBusDxe.inf

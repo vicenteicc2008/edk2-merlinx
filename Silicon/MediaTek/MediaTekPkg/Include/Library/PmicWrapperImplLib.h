@@ -1,0 +1,6 @@
+#ifndef _MTK_PWRAP_IMPL_LIB_H
+#define _MTK_PWRAP_IMPL_LIB_H
+
+extern MTK_PWRAP_PLATFORM_INFO PlatformInfo;
+
+#endif // _MTK_PWRAP_IMPL_LIB_H

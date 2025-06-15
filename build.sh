@@ -3,13 +3,13 @@
 function _help(){
 	echo "Usage: build.sh --device DEV"
 	echo
-	echo "Build edk2 for Qualcomm Snapdragon platforms."
+	echo "Build edk2 for Mediatek platforms."
 	echo
 	echo "Options: "
 	echo "	--device DEV, -d DEV:    build for DEV."
 	echo "	--all, -a:               build all devices."
 	echo "	--chinese, -c:           use hub.nuaa.cf for submodule cloning."
-	echo "	--release MODE, -r MODE: Release mode for building, default is 'RELEASE', 'DEBUG' alternatively."
+	echo "	--release MODE, -r MODE: Release mode for building, default is 'DEBUG', 'RELEASE' alternatively."
 	echo "	--toolchain TOOLCHAIN:   Set toolchain, default is 'CLANG38'."
 	echo "	--uart, -u:              compile with UART support, print debug messages to uart debug port."
 	echo " 	--skip-rootfs-gen:       skip generating SimpleInit rootfs to speed up building."
@@ -167,7 +167,7 @@ cd "${ROOTDIR}"||exit 1
 typeset -l DEVICE
 typeset -u MODE
 DEVICE=""
-MODE=RELEASE
+MODE=DEBUG
 CHINESE=false
 CLEAN=false
 DISTCLEAN=false

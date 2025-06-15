@@ -21,13 +21,6 @@ UINT64  mSystemMemoryEnd = FixedPcdGet64 (PcdSystemMemoryBase) +
 
 VOID EFIAPI ProcessLibraryConstructorList(VOID);
 
-volatile UINT32* wdt_reg = (volatile UINT32*)0x10007000;
-
-VOID DisableWDT()
-{
-	*wdt_reg = 0x22000000;
-}
-
 VOID
 PrePiMain(
   IN VOID *StackBase,
@@ -126,10 +119,7 @@ CEntryPoint(
   IN VOID *StackBase,
   IN UINTN StackSize
   )
-{
-  // Disable watchdog (FIXME)
-  DisableWDT();
-  
+{  
   // Do platform specific initialization here
   PlatformInitialize();
 

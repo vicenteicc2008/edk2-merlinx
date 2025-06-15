@@ -1,0 +1,35 @@
+#  @Ds1307RtcLib.inf
+#
+#  Copyright (c) 2016, Freescale Semiconductor, Inc. All rights reserved.
+#  Copyright 2017 NXP
+#
+#  SPDX-License-Identifier: BSD-2-Clause-Patent
+#
+#
+
+[Defines]
+  INF_VERSION                    = 0x0001001A
+  BASE_NAME                      = MT6358RtcLib
+  FILE_GUID                      = 4406787f-0dad-42c1-9390-525cce234b4e
+  MODULE_TYPE                    = BASE
+  VERSION_STRING                 = 1.0
+  LIBRARY_CLASS                  = RealTimeClockLib
+
+[Sources.common]
+  MT6358RtcLib.c
+
+[Packages]
+  EmbeddedPkg/EmbeddedPkg.dec
+  MdePkg/MdePkg.dec
+  Silicon/MediaTek/MediaTekPkg/MediaTekPkg.dec
+
+[LibraryClasses]
+  DebugLib
+  UefiBootServicesTableLib
+  UefiLib
+
+[Protocols]
+  gMediaTekMT6358PmicProtocolGuid                   ## CONSUMES
+
+[Depex]
+  gMediaTekMT6358PmicProtocolGuid
